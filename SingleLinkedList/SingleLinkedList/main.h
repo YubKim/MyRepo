@@ -10,6 +10,9 @@
 #define main_h
 
 #include <stdio.h>
-#include "node.h"
+#include "SLL_Node.h"
+
+stNode      *ptHead;
+stList      *ptList;
 
 #endif /* main_h */

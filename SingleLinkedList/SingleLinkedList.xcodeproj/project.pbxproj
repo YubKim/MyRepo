@@ -61,9 +61,9 @@
 		A501D3901DBB4EF2007E33C5 /* SingleLinkedList */ = {
 			isa = PBXGroup;
 			children = (
-				A501D39C1DBB51B7007E33C5 /* SLL_Node.h */,
 				A501D3911DBB4EF2007E33C5 /* main.c */,
 				A501D3981DBB4F27007E33C5 /* main.h */,
+				A501D39C1DBB51B7007E33C5 /* SLL_Node.h */,
 				A501D39A1DBB517E007E33C5 /* SLL_Node.c */,
 			);
 			path = SingleLinkedList;

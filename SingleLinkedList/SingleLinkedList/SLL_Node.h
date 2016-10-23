@@ -9,21 +9,35 @@
 #ifndef SLL_Node_h
 #define SLL_Node_h
 
-typedef struct stNode {
-    unsigned char *pNext;
-    unsigned char *pValue;
-} tNode, *ptNode;
+#include <stdio.h>
+#include <stdlib.h>
 
-typedef struct stList {
-    unsigned int unNodeCnt;
-    unsigned char *pHead;
-} tList, *ptList;
+typedef enum _eCmnRetValue {
+    RET_FAIL = -1,
+    RET_SUCC = 0,
+    RET_NULL_PTR = 1
+} eCmnRetVal;
 
-void init_SLL(ptNode *pHead);
-void add_SLL();
-void del_SLL();
-void set_List_SLL();
-ptNode srch_SLL();
+typedef struct _stNode {
+    unsigned char   *pNext;
+    unsigned int    unKeyValue;
+    unsigned char   *pData;
+} stNode, *ptNode;
+
+typedef struct _stList {
+    unsigned int    unNodeCnt;
+    stNode          *pHead;
+} stList, *ptList;
+
+stNode *pHead;
+stList *pList;
+
+int init_SLL(int nCntList);
+int deinit_SLL(int nCntList);
+int add_SLL(unsigned int unKeyValue, unsigned char *pData);
+//int del_SLL();
+int set_List_SLL();
+int srch_SLL(unsigned int unKeyValue, stNode *pSrchNode);
 
 
 #endif /* SLL_Node_h */
